@@ -283,7 +283,7 @@
   
 }
 </style>
-<title>Nmap Scan Report - Scanned at Tue Dec  3 14:08:58 2024</title>
+<title>Nmap Scan Report - Scanned at Tue Dec  3 12:47:46 2024</title>
 <script type="text/javascript">
      
       
@@ -329,7 +329,7 @@
 </head>
 <body>
 <a name="top"></a><div id="container">
-<h1>Nmap Scan Report - Scanned at Tue Dec  3 14:08:58 2024</h1>
+<h1>Nmap Scan Report - Scanned at Tue Dec  3 12:47:46 2024</h1>
 <ul id="menu">
 <li><a href="#scansummary">Scan Summary</a></li>
 <li> | <a href="#host_192_168_50_101" class="up">192.168.50.101</a>
@@ -338,10 +338,10 @@
 <a name="scansummary"></a><hr class="print_only">
 <h2>Scan Summary</h2>
 <p>
-      Nmap 7.94SVN was initiated at Tue Dec  3 14:08:58 2024 with these arguments:<br><i>nmap -O -sV -sV -oX report-metasploit2.xml 192.168.50.101</i><br></p>
+      Nmap 7.94SVN was initiated at Tue Dec  3 12:47:46 2024 with these arguments:<br><i>nmap -A -oX report.xml 192.168.50.101</i><br></p>
 <p>
     Verbosity: 0; Debug level 0</p>
-<p>Nmap done at Tue Dec  3 14:09:52 2024; 1 IP address (1 host up) scanned in 54.70 seconds</p>
+<p>Nmap done at Tue Dec  3 12:49:54 2024; 1 IP address (1 host up) scanned in 128.54 seconds</p>
 <hr class="print_only">
 <a name="host_192_168_50_101"></a><h2 class="up">192.168.50.101<span class="print_only">(online)</span>
 </h2>
@@ -385,6 +385,27 @@
 <td>2.3.4 </td>
 <td> </td>
 </tr>
+<tr class="script">
+<td></td>
+<td>ftp-anon </td>
+<td colspan="6"><pre>Anonymous FTP login allowed (FTP code 230) </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>ftp-syst </td>
+<td colspan="6"><pre>
+  STAT: 
+FTP server status:
+     Connected to 192.168.50.100
+     Logged in as ftp
+     TYPE: ASCII
+     No session bandwidth limit
+     Session timeout in seconds is 300
+     Control connection is plain text
+     Data connections will be plain text
+     vsFTPd 2.3.4 - secure, fast, stable
+End of status </pre></td>
+</tr>
 <tr class="open">
 <td>22</td>
 <td>tcp</td>
@@ -394,6 +415,13 @@
 <td>OpenSSH </td>
 <td>4.7p1 Debian 8ubuntu1 </td>
 <td>protocol 2.0 </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>ssh-hostkey </td>
+<td colspan="6"><pre>
+  1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)
+  2048 56:56:24:0f:21:1d:de:a7:2b:ae:61:b1:24:3d:e8:f3 (RSA) </pre></td>
 </tr>
 <tr class="open">
 <td>23</td>
@@ -415,6 +443,11 @@
 <td> </td>
 <td> </td>
 </tr>
+<tr class="script">
+<td></td>
+<td>smtp-commands </td>
+<td colspan="6"><pre>metasploitable.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN </pre></td>
+</tr>
 <tr class="open">
 <td>53</td>
 <td>tcp</td>
@@ -424,6 +457,12 @@
 <td>ISC BIND </td>
 <td>9.4.2 </td>
 <td> </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>dns-nsid </td>
+<td colspan="6"><pre>
+  bind.version: 9.4.2 </pre></td>
 </tr>
 <tr class="open">
 <td>80</td>
@@ -435,6 +474,16 @@
 <td>2.2.8 </td>
 <td>(Ubuntu) DAV/2 </td>
 </tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Metasploitable2 - Linux </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-server-header </td>
+<td colspan="6"><pre>Apache/2.2.8 (Ubuntu) DAV/2 </pre></td>
+</tr>
 <tr class="open">
 <td>111</td>
 <td>tcp</td>
@@ -444,6 +493,23 @@
 <td> </td>
 <td>2 </td>
 <td>RPC #100000 </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>rpcinfo </td>
+<td colspan="6"><pre>
+  program version    port/proto  service
+  100000  2            111/tcp   rpcbind
+  100000  2            111/udp   rpcbind
+  100003  2,3,4       2049/tcp   nfs
+  100003  2,3,4       2049/udp   nfs
+  100005  1,2,3      37987/udp   mountd
+  100005  1,2,3      49545/tcp   mountd
+  100021  1,3,4      43233/tcp   nlockmgr
+  100021  1,3,4      53565/udp   nlockmgr
+  100024  1          41043/udp   status
+  100024  1          55694/tcp   status
+ </pre></td>
 </tr>
 <tr class="open">
 <td>139</td>
@@ -462,7 +528,7 @@
 <td>netbios-ssn </td>
 <td>syn-ack</td>
 <td>Samba smbd </td>
-<td>3.X - 4.X </td>
+<td>3.0.20-Debian </td>
 <td>workgroup: WORKGROUP </td>
 </tr>
 <tr class="open">
@@ -545,6 +611,18 @@
 <td>5.0.51a-3ubuntu5 </td>
 <td> </td>
 </tr>
+<tr class="script">
+<td></td>
+<td>mysql-info </td>
+<td colspan="6"><pre>
+  Protocol: 10
+  Version: 5.0.51a-3ubuntu5
+  Thread ID: 433
+  Capabilities flags: 43564
+  Some Capabilities: SwitchToSSLAfterHandshake, SupportsCompression, ConnectWithDatabase, LongColumnFlag, Support41Auth, SupportsTransactions, Speaks41ProtocolNew
+  Status: Autocommit
+  Salt: FZoDAXwm&gt;.kP0?+ZaZ~- </pre></td>
+</tr>
 <tr class="open">
 <td>5432</td>
 <td>tcp</td>
@@ -555,6 +633,18 @@
 <td>8.3.0 - 8.3.7 </td>
 <td> </td>
 </tr>
+<tr class="script">
+<td></td>
+<td>ssl-cert </td>
+<td colspan="6"><pre>Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX
+Not valid before: 2010-03-17T14:07:45
+Not valid after:  2010-04-16T14:07:45 </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>ssl-date </td>
+<td colspan="6"><pre>2024-12-03T11:48:51+00:00; +4s from scanner time. </pre></td>
+</tr>
 <tr class="open">
 <td>5900</td>
 <td>tcp</td>
@@ -564,6 +654,14 @@
 <td>VNC </td>
 <td> </td>
 <td>protocol 3.3 </td>
+</tr>
+<tr class="script">
+<td></td>
+<td>vnc-info </td>
+<td colspan="6"><pre>
+  Protocol version: 3.3
+  Security types: 
+    VNC Authentication (2) </pre></td>
 </tr>
 <tr class="open">
 <td>6000</td>
@@ -595,6 +693,11 @@
 <td> </td>
 <td>Protocol v1.3 </td>
 </tr>
+<tr class="script">
+<td></td>
+<td>ajp-methods </td>
+<td colspan="6"><pre>Failed to get a valid response for the OPTION request </pre></td>
+</tr>
 <tr class="open">
 <td>8180</td>
 <td>tcp</td>
@@ -605,12 +708,22 @@
 <td>1.1 </td>
 <td> </td>
 </tr>
+<tr class="script">
+<td></td>
+<td>http-favicon </td>
+<td colspan="6"><pre>Apache Tomcat </pre></td>
+</tr>
+<tr class="script">
+<td></td>
+<td>http-title </td>
+<td colspan="6"><pre>Apache Tomcat/5.5 </pre></td>
+</tr>
 </table>
 <h3>Remote Operating System Detection</h3>
 <ul>
 <li>Used port: <b>21/tcp</b> (<b>open</b>)  </li>
 <li>Used port: <b>1/tcp</b> (<b>closed</b>)  </li>
-<li>Used port: <b>40207/udp</b> (<b>closed</b>)  </li>
+<li>Used port: <b>34712/udp</b> (<b>closed</b>)  </li>
 <li>OS match: <b>Linux 2.6.9 - 2.6.33</b> (<b>100%</b>)</li>
 </ul>
 
@@ -618,6 +731,44 @@
 
 
 
+<h3>Host Script Output</h3>
+<table>
+<tr class="head">
+<td>Script Name</td>
+<td>Output</td>
+</tr>
+<tr class="script">
+<td>smb-security-mode </td>
+<td><pre>
+  account_used: &lt;blank&gt;
+  authentication_level: user
+  challenge_response: supported
+  message_signing: disabled (dangerous, but default) </pre></td>
+</tr>
+<tr class="script">
+<td>clock-skew </td>
+<td><pre>mean: 1h40m03s, deviation: 2h53m12s, median: 3s </pre></td>
+</tr>
+<tr class="script">
+<td>nbstat </td>
+<td><pre>NetBIOS name: METASPLOITABLE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown) </pre></td>
+</tr>
+<tr class="script">
+<td>smb2-time </td>
+<td><pre>Protocol negotiation failed (SMB2) </pre></td>
+</tr>
+<tr class="script">
+<td>smb-os-discovery </td>
+<td><pre>
+  OS: Unix (Samba 3.0.20-Debian)
+  Computer name: metasploitable
+  NetBIOS computer name: 
+  Domain name: localdomain
+  FQDN: metasploitable.localdomain
+  System time: 2024-12-03T06:48:28-05:00
+ </pre></td>
+</tr>
+</table>
 
 <br><a href="javascript:toggle('metrics_192.168.50.101');">
     Misc Metrics <span class="noprint"><small> (click to expand)</small></span></a><div id="metrics_192.168.50.101" class="hidden"><table cellspacing="1">
@@ -631,7 +782,7 @@
 </tr>
 <tr>
 <td>System Uptime</td>
-<td>10304 seconds  (last reboot: Tue Dec  3 11:18:08 2024)
+<td>9311 seconds  (last reboot: Tue Dec  3 10:14:43 2024)
         </td>
 </tr>
 <tr>
@@ -640,7 +791,7 @@
 </tr>
 <tr>
 <td>TCP Sequence Prediction</td>
-<td>Difficulty=191 (Good luck!)</td>
+<td>Difficulty=197 (Good luck!)</td>
 </tr>
 <tr>
 <td>IP ID Sequence Generation</td>
